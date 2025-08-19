@@ -1,0 +1,148 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-container {
+    padding: 20px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1000;
+    flex-direction: column;
+    width: 550px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.popup-header {
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.popup-content {
+    flex-direction: column;
+}
+
+.popup-description-container {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 100%; /* Permite que a descrição ocupe toda a largura */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.popup-location-date {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda verticalmente */
+}
+
+.popup-description {
+    white-space: pre-wrap; /* Permite quebra de linha dentro da descrição */
+    word-wrap: break-word; /* Quebra a palavra se for muito longa */
+    text-align: left; /* Alinha o texto da descrição à esquerda */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup-content p {
+    margin-bottom: 15px;
+}
+
+.finish-button {
+    align-self: center;
+    width: 120px;
+    height: 30px;
+    background-color: #FF7759;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content-header {
+    display: flex;
+    flex-direction: row; /* Coloca descrição, localização e data em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.separator-subscriber {
+    height: 0.5px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.table-container {
+    margin-top: 15px;
+    max-height: 200px; /* Define a altura máxima para a tabela */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical à tabela */
+}
+
+.empty-container {
+    margin-top: 15px;
+    max-height: 200px;
+}
+
+.subscribers-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.subscribers-table tr {
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #F6F6F6;
+}
+
+.subscribers-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.subscribers-table td {
+    padding: 12px;
+}
+
+.popup-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    align-self: center;
+    width: 90px;
+    height: 30px;
+    background-color: #FFF;
+    border: 2px solid #FFDD59;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: '#686868';
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: inherit;
+    padding: 0;
+}
+
+.link-button:hover {
+    color: #FFDD59; /* Opcional: muda a cor ao passar o mouse */
+}

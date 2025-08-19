@@ -1,0 +1,68 @@
+.card-button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-button:hover {
+    transform: scale(1.05);
+}
+
+.popup-overlay-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-container-details {
+    padding: 20px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1000;
+    flex-direction: column;
+    width: 450px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.popup-header-details {
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.popup-content-details {
+    flex-direction: column;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.popup-content-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content-details p{
+    margin-bottom: 15px;
+}
+
+.subscribe-button-details{
+    align-self: center;
+    width: 90px;
+    height: 30px;
+    background-color: #FFDD59;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

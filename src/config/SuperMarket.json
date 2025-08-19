@@ -1,0 +1,480 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "contract AdsManager",
+				"name": "_adsManager",
+				"type": "address"
+			},
+			{
+				"internalType": "contract Magazine",
+				"name": "_magazine",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "nomeFantasia",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "CNPJ",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "marketAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "userMarketCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "userMarketDeleted",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "adsManager",
+		"outputs": [
+			{
+				"internalType": "contract AdsManager",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_tittle",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_limQuantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_date",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isOpen",
+				"type": "bool"
+			}
+		],
+		"name": "createAd",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_ipfsHash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			}
+		],
+		"name": "createMagazine",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_nomeFantasia",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_CNPJ",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_Localizacao",
+				"type": "string"
+			}
+		],
+		"name": "createUserMarket",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_adId",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteAd",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_adId",
+				"type": "uint256"
+			}
+		],
+		"name": "getAdRecipients",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "CPF",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "orgAddress",
+						"type": "address"
+					}
+				],
+				"internalType": "struct AdsManager.Recipient[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "adId",
+				"type": "uint256"
+			}
+		],
+		"name": "getAdRegistrations",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "marketAddress",
+				"type": "address"
+			}
+		],
+		"name": "getMarketAds",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "adId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "tittle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limQuantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "date",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isOpen",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "localization",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "marketAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "orgsDonated",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct AdsManager.Ad[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getMarketMagazines",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "magazineId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "marketAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsHash",
+						"type": "string"
+					}
+				],
+				"internalType": "struct Magazine.magazine[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_marketAddress",
+				"type": "address"
+			}
+		],
+		"name": "getUserMarket",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "nomeFantasia",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "CNPJ",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "Localizacao",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "marketAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct SuperMarket.superMarket",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "magazine",
+		"outputs": [
+			{
+				"internalType": "contract Magazine",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "marketCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_adId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "_orgAddress",
+				"type": "address"
+			}
+		],
+		"name": "registerAdDonated",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_adId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isOpen",
+				"type": "bool"
+			}
+		],
+		"name": "updateAdStatus",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "userSuperMarkets",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "nomeFantasia",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "CNPJ",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "Localizacao",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "marketAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

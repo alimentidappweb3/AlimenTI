@@ -1,0 +1,26 @@
+.text-container{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 80px;
+    width:310px;
+  }
+  
+  .text-container .icon{
+    position: absolute;
+    right: -55px;  
+    top: 50%;
+    transform: translateY(-50%);
+    color: #060606;
+    margin-left: -25px;
+  }
+  
+  .text-container .input{
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    width: 370px;
+    height: 40px;
+    border: 1px solid #ccc;
+    
+  }

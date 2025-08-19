@@ -1,0 +1,24 @@
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #666;
+  }
+  
+  .empty-state-icon {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .empty-state-message {
+    font-size: 18px;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+  }
+  

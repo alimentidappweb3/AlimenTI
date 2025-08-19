@@ -1,0 +1,110 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-container-removal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .separator {
+    height: 2px;
+    background: #ccc;
+    margin: 10px 0;
+  }
+  
+  .popup-content {
+    margin-top: 20px;
+  }
+  
+  .popup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-row input[type='text'],
+  input[type='date'],
+  textarea {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Open sans", sans-serif;
+    margin: 0 5px; /* Adiciona espaçamento horizontal entre os inputs */
+  }
+  
+  input[type='text']:focus,
+  input[type='date']:focus,
+  textarea:focus {
+    border-color: #FFDD59;
+    outline: none;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 80px;
+  }
+  
+  .popup-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .cancel-button-card,
+  .subscribe-button {
+    padding: 5px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button-card {
+    background-color: #FFFF;
+    border: 2px solid #FFDD59;
+  }
+  
+  .subscribe-button {
+    background-color: #FFDD59;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #f5c814;
+  }
+  
